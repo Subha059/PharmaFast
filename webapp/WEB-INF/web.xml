@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                        https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+    version="5.0">
+
+    <!-- ================= PATIENT ================= -->
+
+    <servlet>
+        <servlet-name>PatientRegisterServlet</servlet-name>
+        <servlet-class>controller.PatientRegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PatientRegisterServlet</servlet-name>
+        <url-pattern>/PatientRegisterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PatientLoginServlet</servlet-name>
+        <servlet-class>controller.PatientLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PatientLoginServlet</servlet-name>
+        <url-pattern>/PatientLoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ================= DOCTOR ================= -->
+
+    <servlet>
+        <servlet-name>DoctorLoginServlet</servlet-name>
+        <servlet-class>controller.DoctorLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DoctorLoginServlet</servlet-name>
+        <url-pattern>/DoctorLoginServlet</url-pattern>
+    </servlet-mapping>
+
+	<!-- ================= DOCTOR REGISTER ================= -->
+
+<servlet>
+    <servlet-name>DoctorRegisterServlet</servlet-name>
+    <servlet-class>controller.DoctorRegisterServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DoctorRegisterServlet</servlet-name>
+    <url-pattern>/DoctorRegisterServlet</url-pattern>
+</servlet-mapping>
+	
+    <!-- ================= OTHERS ================= -->
+
+    <servlet>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <servlet-class>controller.AppointmentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <url-pattern>/AppointmentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MedicineServlet</servlet-name>
+        <servlet-class>controller.MedicineServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MedicineServlet</servlet-name>
+        <url-pattern>/MedicineServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>controller.AdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>controller.OrderServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
+</servlet-mapping>
+	<servlet>
+    <servlet-name>UpdateStockServlet</servlet-name>
+    <servlet-class>controller.UpdateStockServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UpdateStockServlet</servlet-name>
+    <url-pattern>/UpdateStockServlet</url-pattern>
+</servlet-mapping>
+	
+	<servlet>
+    <servlet-name>AppointmentActionServlet</servlet-name>
+    <servlet-class>controller.AppointmentActionServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>AppointmentActionServlet</servlet-name>
+    <url-pattern>/AppointmentActionServlet</url-pattern>
+</servlet-mapping>
+	<servlet>
+    <servlet-name>AddMedicineServlet</servlet-name>
+    <servlet-class>controller.AddMedicineServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>AddMedicineServlet</servlet-name>
+    <url-pattern>/AddMedicineServlet</url-pattern>
+</servlet-mapping>
+	
+	
+    <!-- ================= WELCOME ================= -->
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

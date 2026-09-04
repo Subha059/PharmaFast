@@ -1,0 +1,13 @@
+﻿# Compiled files
+*.class
+
+# IDE files
+.vscode/
+.idea/
+
+# Tomcat generated files
+webapp/WEB-INF/classes/
+
+# OS files
+.DS_Store
+Thumbs.db
