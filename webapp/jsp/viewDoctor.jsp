@@ -15,6 +15,7 @@
 <html>
 <head>
     <title>View Doctors</title>
+
     <style>
         body {
             margin: 0;
@@ -107,18 +108,27 @@
 </div>
 
 <div class="container">
+
     <h2>Registered Doctors</h2>
 
-    <!-- 🔍 Search Form -->
+    <!-- Search Form -->
     <div class="search-box">
+
         <form method="get">
-            <input type="text" name="search" placeholder="Search by name, email, phone or specialization"
+
+            <input type="text"
+                   name="search"
+                   placeholder="Search by name, email, phone or specialization"
                    value="<%= (search != null) ? search : "" %>">
+
             <button type="submit">Search</button>
+
         </form>
+
     </div>
 
     <table>
+
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -129,44 +139,83 @@
 
         <%
             try {
+
                 Connection con = DBConnection.getConnection();
+
                 PreparedStatement ps;
 
                 if (search != null && !search.trim().isEmpty()) {
+
                     ps = con.prepareStatement(
-                        "SELECT * FROM doctors WHERE name LIKE ? OR email LIKE ? OR phone LIKE ? OR specialization LIKE ?"
+                        "SELECT * FROM doctors " +
+                        "WHERE name LIKE ? " +
+                        "OR email LIKE ? " +
+                        "OR phone LIKE ? " +
+                        "OR specialization LIKE ?"
                     );
+
                     String q = "%" + search + "%";
+
                     ps.setString(1, q);
                     ps.setString(2, q);
                     ps.setString(3, q);
                     ps.setString(4, q);
+
                 } else {
-                    ps = con.prepareStatement("SELECT * FROM doctors");
+
+                    ps = con.prepareStatement(
+                        "SELECT * FROM doctors"
+                    );
                 }
 
                 ResultSet rs = ps.executeQuery();
 
                 while (rs.next()) {
         %>
+
         <tr>
-            <td><%= rs.getInt("id") %></td>
+
+            <!-- IMPORTANT: doctors table uses doctor_id -->
+            <td><%= rs.getInt("doctor_id") %></td>
+
             <td><%= rs.getString("name") %></td>
+
             <td><%= rs.getString("email") %></td>
+
             <td><%= rs.getString("phone") %></td>
+
             <td><%= rs.getString("specialization") %></td>
+
         </tr>
+
         <%
                 }
+
+                rs.close();
+                ps.close();
+                con.close();
+
             } catch (Exception e) {
-                out.println("<tr><td colspan='5'>Error loading doctors</td></tr>");
+
+                out.println(
+                    "<tr><td colspan='5'>Error loading doctors: "
+                    + e.getMessage()
+                    + "</td></tr>"
+                );
+
             }
         %>
+
     </table>
 
     <div class="back">
-        <a href="adminDashboard.jsp">Back to Dashboard</a>
+
+        <a href="adminDashboard.jsp">
+            Back to Dashboard
+        </a>
+
     </div>
+
 </div>
 
 </body>

@@ -105,13 +105,13 @@
 
         /* TEAM */
         .team {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            display: flex;
+            justify-content: center;
             margin-top: 40px;
         }
 
         .member {
+            width: 350px;
             background: linear-gradient(135deg, #ffffff, #f2f9fa);
             padding: 40px;
             border-radius: 20px;
@@ -125,16 +125,25 @@
         }
 
         .member h3 {
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             color: #003b44;
             font-size: 24px;
+        }
+
+        .member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #0a5c6b;
         }
 
         .role {
             font-weight: bold;
             color: #198754;
             margin-bottom: 15px;
-            font-size: 14px;
+            font-size: 15px;
             letter-spacing: 1px;
         }
 
@@ -157,16 +166,6 @@
             color: #ffffff;
             font-weight: bold;
         }
-        
-        .member img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 4px solid #0a5c6b;
-}
-        
     </style>
 </head>
 
@@ -176,6 +175,7 @@
 <div class="hero">
     <div class="hero-content">
         <h1>PharmaFast</h1>
+
         <p>
             A next generation digital healthcare platform designed to
             connect patients, doctors, and pharmacies with speed,
@@ -189,6 +189,7 @@
 
     <div class="section">
         <h2>About PharmaFast</h2>
+
         <p>
             PharmaFast is built with the vision of simplifying healthcare
             management through technology. From booking doctor appointments
@@ -197,94 +198,116 @@
         </p>
     </div>
 
+
     <div class="section">
         <h2>What Makes Us Different</h2>
 
         <div class="features">
+
             <div class="feature">
                 <h3>Fast and Reliable</h3>
+
                 <p>
                     Optimized workflows ensure quick appointment booking
                     and instant medicine ordering without delays.
                 </p>
             </div>
 
+
             <div class="feature">
                 <h3>Secure by Design</h3>
+
                 <p>
                     Patient data is handled with strict security practices
                     to ensure privacy and trust.
                 </p>
             </div>
 
+
             <div class="feature">
                 <h3>User First Approach</h3>
+
                 <p>
                     Clean interface and simple navigation make the platform
                     easy to use for everyone.
                 </p>
             </div>
 
+
             <div class="feature">
                 <h3>Future Ready</h3>
+
                 <p>
                     Designed to scale with additional healthcare services
                     and integrations in the future.
                 </p>
             </div>
+
         </div>
     </div>
 
+
+    <!-- TEAM -->
     <div class="section">
+
         <h2>Meet the Team</h2>
 
         <div class="team">
-            <div class="member">
-                <h3>Abir Ghosh</h3>
-                <img src="Abir05.jpeg">
-                <div class="role">Co Founder and Backend Developer</div>
-                <p>
-                    Responsible for system architecture, database design,
-                    and backend logic ensuring performance and stability.
-                </p>
-            </div>
-            
 
             <div class="member">
-            
-                <h3>Rudranil Goswami</h3>
-                <img src="Rudranil.jpeg">
-                <div class="role">Co Founder and Application Developer</div>
+
+                <h3>Subhadeep Gorai</h3>
+
+                <img src="subhadeep.jpeg"
+                     alt="Subhadeep Gorai">
+
+                <div class="role">
+                    Developer
+                </div>
+
                 <p>
-                    Focuses on application features, workflow design,
-                    and creating a smooth user experience.
+                    Responsible for developing and managing the
+                    PharmaFast Online Medicine Management System.
                 </p>
+
             </div>
+
         </div>
+
     </div>
+
+
+    <!-- MAIN OFFICE -->
     <div class="section">
-    <h2>Main Office</h2>
-    <p>
-        PharmaFast operates from its primary office located at:
-    </p>
 
-    <div class="feature" style="max-width:700px;">
-        <h3>Head Office Address</h3>
+        <h2>Main Office</h2>
+
         <p>
-            PX82+66Q, Vivekananda Sarani,<br>
-            Opposite IndianOil,<br>
-            Kanyapur, Asansol,<br>
-            West Bengal 713305
+            PharmaFast operates from its primary office located at:
         </p>
+
+        <div class="feature" style="max-width:700px;">
+
+            <h3>Head Office Address</h3>
+
+            <p>
+                PX82+66Q, Vivekananda Sarani,<br>
+                Opposite IndianOil,<br>
+                Kanyapur, Asansol,<br>
+                West Bengal 713305
+            </p>
+
+        </div>
+
     </div>
-</div>
-    
 
 </div>
+
 
 <!-- FOOTER -->
 <div class="footer">
-    <span>PharmaFast</span> - Building the future of digital healthcare
+    <span>PharmaFast</span>
+    - Building the future of digital healthcare
 </div>
 
 </body>

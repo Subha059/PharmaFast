@@ -67,7 +67,7 @@
 <div class="login-box">
     <h2>Admin Login</h2>
 
-    <form action="AdminServlet" method="post">
+    <form action="../AdminServlet" method="post">
 
         <div class="field-label">Username</div>
         <input type="text" name="username" placeholder="Enter admin username" required>
